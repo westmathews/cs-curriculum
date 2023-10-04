@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerCaveWalk : MonoBehaviour
 {
-    private float walkspeed;
+    private float xWalkspeed;
     private float xDirection;
     private float xVector;
     // Start is called before the first frame update
     void Start()
     {
-        float walkspeed = 5f;
+        xWalkspeed = 5;
 
     }
 
@@ -18,7 +18,7 @@ public class PlayerCaveWalk : MonoBehaviour
     void Update()
     {
         xDirection = Input.GetAxis("Horizontal");
-        //xVector = xDirection * walkspeed * Time.deltaTime;
+        xVector = xDirection * xWalkspeed * Time.deltaTime;
         transform.position = transform.position + new Vector3(xVector, 0, 0);
     }
 }
