@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class CoinCollection : MonoBehaviour
 {
-    public float Coins;
-    private void OnTriggerEnter2D(Collider2D other)
+    
+    public HUD hud;
+    
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        { 
-            Coins = Coins + 1;
+        {
+            hud.Coins = hud.Coins + 1;
             gameObject.SetActive(false);
         }
     }
     // Start is called before the first frame update
     void Start()
     {
-        Coins = 0;
+        hud = GameObject.FindObjectOfType<HUD>();
+        hud.Coins = 0;
     }
 
     // Update is called once per frame
