@@ -9,6 +9,7 @@ public class PlayerOverworldWalk : MonoBehaviour
     private float xVector;
     private float yDirection;
     private float yVector;
+    private float Sp;
 
     
     // Start is called before the first frame update

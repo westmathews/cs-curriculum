@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Axe
   - Spikes
+  - CoinHUD
   layers:
   - Default
   - TransparentFX

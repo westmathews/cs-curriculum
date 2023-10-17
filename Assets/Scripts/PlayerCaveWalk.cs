@@ -17,6 +17,7 @@ public class PlayerCaveWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         xDirection = Input.GetAxis("Horizontal");
         xVector = xDirection * xWalkspeed * Time.deltaTime;
         transform.position = transform.position + new Vector3(xVector, 0, 0);

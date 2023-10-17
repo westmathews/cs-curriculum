@@ -22,7 +22,8 @@ public class HUD : MonoBehaviour
 
     void Start()
     {
-        
+       CoinsText.color = Color.yellow; 
+       HealthText.color = Color.red;
     }
 
 
@@ -35,5 +36,10 @@ public class HUD : MonoBehaviour
     {
         CoinsText.text = Coins.ToString();
         HealthText.text = health.ToString();
+        if (health < 1)
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
+        
     }
 }
